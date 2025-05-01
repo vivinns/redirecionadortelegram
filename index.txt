@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecionando...</title>
+</head>
+<body>
+    <p>Redirecionando...</p>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var redirectUrls = [
+                'https://wa.me/5577981022765?text=Oi%20amor%2C%20quero%20comprar%20seus%20conte%C3%BAdos%20%F0%9F%A5%B5%F0%9F%98%88',
+                'https://wa.me/5577991043649?text=Oi%20amor%2C%20quero%20comprar%20seus%20conte%C3%BAdos%20%F0%9F%A5%B5%F0%9F%98%88',
+                'https://wa.me/5577981427133?text=Oi%20amor%2C%20quero%20comprar%20seus%20conte%C3%BAdos%20%F0%9F%A5%B5%F0%9F%98%88',
+                'https://wa.me/5577999670110?text=Oi%20amor%2C%20quero%20comprar%20seus%20conte%C3%BAdos%20%F0%9F%A5%B5%F0%9F%98%88',
+                'https://wa.me/5577991084794?text=Oi%20amor%2C%20quero%20comprar%20seus%20conte%C3%BAdos%20%F0%9F%A5%B5%F0%9F%98%88',
+                'https://wa.me/5577991177021?text=Oi%20amor%2C%20quero%20comprar%20seus%20conte%C3%BAdos%20%F0%9F%A5%B5%F0%9F%98%88'
+            ];
+            var randomUrl = redirectUrls[Math.floor(Math.random() * redirectUrls.length)];
+            window.location.href = randomUrl;
+        });
+    </script>
+</body>
+</html>
