@@ -1,19 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <title>Redirecionando...</title>
-</head>
-<body>
-    <p>Redirecionando...</p>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var redirectUrls = [
-                'https://t.me/carlinhacam_bot'
-            ];
-            var randomUrl = redirectUrls[Math.floor(Math.random() * redirectUrls.length)];
-            window.location.href = randomUrl;
-        });
-    </script>
-</body>
-</html>
+<script>
+  const isMobile = /android|iphone|ipad|ipod|blackberry|windows phone/i.test(navigator.userAgent.toLowerCase());
+
+  if (isMobile) {
+    // Redireciona para o bot do celular
+    window.location.href = "https://t.me/bot_para_celulares";
+  } else {
+    // Redireciona para o bot do PC
+    window.location.href = "https://t.me/bot_para_pc";
+  }
+</script>
