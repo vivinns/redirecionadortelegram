@@ -1,6 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🔞 Conteúdo +18</title>
+  <style>
+    body {
+      background: #0d0d0d;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      text-align: center;
+      margin: 0;
+    }
+    h1 {
+      font-size: 2rem;
+      color: #ff4d6d;
+    }
+    p {
+      color: #ccc;
+      margin-top: 10px;
+    }
+    .countdown {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      color: #ff4d6d;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
 
 <!-- Meta Pixel Code -->
 <script>
@@ -15,28 +48,35 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 fbq('init', '1329892408553123');
 fbq('track', 'PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1329892408553123&ev=PageView&noscript=1"
-/></noscript>
+<noscript>
+  <img height="1" width="1" style="display:none"
+       src="https://www.facebook.com/tr?id=1329892408553123&ev=PageView&noscript=1"/>
+</noscript>
 <!-- End Meta Pixel Code -->
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Redirecionando...</title>
+<h1>⚠️ Atenção: Conteúdo +18 🔥</h1>
+<p>Você está sendo redirecionado para o Telegram agora...</p>
+<p class="countdown">Redirecionando em <span id="tempo">4</span> segundos</p>
 
 <script>
-  const isMobile = /android|iphone|ipad|ipod|blackberry|windows phone/i.test(navigator.userAgent.toLowerCase());
+  let tempo = 4; // segundos
+  const el = document.getElementById("tempo");
+  
+  const intervalo = setInterval(() => {
+    tempo--;
+    el.textContent = tempo;
+    if (tempo <= 0) {
+      clearInterval(intervalo);
 
-  if (isMobile) {
-    // Redireciona para usuários de celular
-    window.location.href = "https://t.me/sobrvipacesso_bot";
-  } else {
-    // Redireciona para usuários de PC
-    window.location.href = "https://google.com";
-  }
+      const isMobile = /android|iphone|ipad|ipod|blackberry|windows phone/i.test(navigator.userAgent.toLowerCase());
+      if (isMobile) {
+        window.location.href = "https://t.me/+_6MitW1Rf0hiNzg1"; // link celular
+      } else {
+        window.location.href = "https://t.me/raisapekiinhabot"; // link PC
+      }
+    }
+  }, 1000);
 </script>
 
-
-</head>
-<body></body>
+</body>
 </html>
