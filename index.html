@@ -35,25 +35,6 @@
 </head>
 <body>
 
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1329892408553123');
-fbq('track', 'PageView');
-</script>
-<noscript>
-  <img height="1" width="1" style="display:none"
-       src="https://www.facebook.com/tr?id=1329892408553123&ev=PageView&noscript=1"/>
-</noscript>
-<!-- End Meta Pixel Code -->
-
 <h1>⚠️ Atenção: Conteúdo +18 🔥</h1>
 <p>Você está sendo redirecionado para o Telegram agora...</p>
 <p class="countdown">Redirecionando em <span id="tempo">4</span> segundos</p>
@@ -61,7 +42,19 @@ fbq('track', 'PageView');
 <script>
   let tempo = 4; // segundos
   const el = document.getElementById("tempo");
-  
+
+  // 🔗 LISTA DE LINKS PARA CELULAR (randomizados)
+  const linksMobile = [
+    "https://t.me/frontacessosobr1bot",
+    "https://t.me/frontacessosobrvip1bot",
+    "https://t.me/frontacessosobrvip5bot",
+    "https://t.me/frontacessosobrvip7bot",
+    "https://t.me/frontacessosobrvip2bot"
+  ];
+
+  // 🔗 LINK FIXO PARA PC
+  const linkPC = "https://t.me/raisapekiinhabot";
+
   const intervalo = setInterval(() => {
     tempo--;
     el.textContent = tempo;
@@ -69,10 +62,14 @@ fbq('track', 'PageView');
       clearInterval(intervalo);
 
       const isMobile = /android|iphone|ipad|ipod|blackberry|windows phone/i.test(navigator.userAgent.toLowerCase());
+      
       if (isMobile) {
-        window.location.href = "https://wiinbot.com/atendimento?ref=681b9dc35a8a15873e194f06"; // link celular
+        // Pega um link aleatório da lista Mobile
+        const link = linksMobile[Math.floor(Math.random() * linksMobile.length)];
+        window.location.href = link;
       } else {
-        window.location.href = "https://t.me/raisapekiinhabot"; // link PC
+        // Sempre o mesmo link no PC
+        window.location.href = linkPC;
       }
     }
   }, 1000);
@@ -80,6 +77,3 @@ fbq('track', 'PageView');
 
 </body>
 </html>
-
-
-
